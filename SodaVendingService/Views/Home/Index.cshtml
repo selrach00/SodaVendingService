@@ -1,0 +1,57 @@
+﻿@model SodaVendingService.Models.IndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Charles's Cool and Crisp Colas</h1>
+    @foreach (var promotion in Model.Promotions)
+    {
+        if (promotion.IsActive)
+        {
+            <div class="alert alert-primary" role="alert">
+                @promotion.PromotionMessage
+            </div>
+        }
+        if (promotion.CustomerWon)
+        {
+            <div class="alert alert-success" role="alert">
+                @promotion.PromotionHitMessage
+            </div>
+        }
+
+    }
+
+</div>
+<div class="row justify-content-center">
+    @Html.ActionLink("Insert Quarter", "InsertQuarter", Model.VendingSession, new { @class = "btn btn-primary btn-large" })
+</div>
+<br /><br />
+<div class="row justify-content-center">
+    @switch (Model.VendingSession.VendingState)
+    {
+        case VendingStates.NoQuarters:
+            <h4>Please insert a quarter to purchase a drink. </h4>
+            break;
+        case VendingStates.HasQuarters:
+            <h4>Select soda below you would like to purchase.</h4>
+            break;
+        case VendingStates.Sold:
+            <h4>Thank you for your patronage! Enjoy your soda.</h4>
+            break;
+        case VendingStates.SoldOut:
+            <h4>We apologize, this drink is currently sold out. Please choose another.</h4>
+            break;
+    }
+
+</div>
+<div class="row justify-content-center">
+    <div>
+        @foreach (var soda in Model.Sodas)
+        {
+            Model.VendingSession.SelectedSodaId = soda.SodaId;
+            <a href ="@Url.Action("DispenseSoda", "Home", Model.VendingSession)"> <img src="@Url.Content(soda.SodaImageURL)"/> </a>
+        }
+    </div>
+</div>

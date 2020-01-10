@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodaVendingService", "SodaVendingService\SodaVendingService.csproj", "{552563B2-567C-42EE-905A-A82E9F7CA687}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodaVendingServiceTests", "SodaVendingServiceTests\SodaVendingServiceTests.csproj", "{0B089900-9EFB-4F0E-A8C1-5CB2309AEF1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{552563B2-567C-42EE-905A-A82E9F7CA687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{552563B2-567C-42EE-905A-A82E9F7CA687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{552563B2-567C-42EE-905A-A82E9F7CA687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{552563B2-567C-42EE-905A-A82E9F7CA687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B089900-9EFB-4F0E-A8C1-5CB2309AEF1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B089900-9EFB-4F0E-A8C1-5CB2309AEF1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B089900-9EFB-4F0E-A8C1-5CB2309AEF1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B089900-9EFB-4F0E-A8C1-5CB2309AEF1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

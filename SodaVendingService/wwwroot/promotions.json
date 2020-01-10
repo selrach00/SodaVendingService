@@ -1,0 +1,8 @@
+[{
+		"IsActive": true,
+		"PromotionMessage": "You could win a trip to Hawaii. Buy a soda to try your luck!",
+		"PromotionHitMessage": "You won a trip to Hawaii!",
+		"PromotionMissMessage": "So close! Better luck next time.",
+		"ProbabilityRange": 50
+	}
+]
